@@ -1,0 +1,19 @@
+{
+    "name": "kronos/redis-session-handler",
+    "description": "Port of https://github.com/snc/SncRedisBundle RedisSessionHandler",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Durand-Tremblay",
+            "email": "etremblay@kronostechnologies.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "predis/predis": "^1.0"
+    },
+    "suggest": {
+        "predis/predis": "If you want to use predis."
+    }
+}
