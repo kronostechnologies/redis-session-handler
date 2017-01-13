@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kronos\\Session\\": "Kronos/Log"
+            "Kronos\\Session\\": "Kronos/Session"
         }
     }
 }
