@@ -15,5 +15,10 @@
     },
     "suggest": {
         "predis/predis": "If you want to use predis."
+    },
+    "autoload": {
+        "psr-4": {
+            "Kronos\\Session\\": "Kronos/Log"
+        }
     }
 }
