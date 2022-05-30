@@ -1,0 +1,16 @@
+name: Psalm Taint analysis
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  psalm-taint-analysis:
+    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v2
+    with:
+      publish-reports: false
+      php-version: '7.4'
+      extensions: pcov
+    secrets:
+      GPR_KEY: ${{ secrets.GPR_KEY }}

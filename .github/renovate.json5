@@ -1,0 +1,24 @@
+{
+  extends: [
+    "github>kronostechnologies/standards:renovate-base"
+  ],
+
+  reviewers: ["team:team-crm"],
+  rebaseWhen: "conflicted",
+
+  php: {
+    packageRules: [
+      {
+        matchUpdateTypes: ["major", "minor", "patch"],
+      },
+      {
+        matchUpdateTypes: ["minor"],
+        groupName: "PHP minors",
+      },
+      {
+        matchUpdateTypes: ["patch"],
+        groupName: "PHP patches",
+      },
+    ],
+  },
+}
