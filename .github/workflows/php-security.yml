@@ -1,12 +1,10 @@
-name: Psalm Taint analysis
-
+name: PHP Security
 on:
   push:
     branches:
       - master
-
 jobs:
-  psalm-taint-analysis:
+  php-security:
     uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v2
     with:
       publish-reports: false
@@ -14,3 +12,7 @@ jobs:
       extensions: pcov
     secrets:
       GPR_KEY: ${{ secrets.GPR_KEY }}
+      DEFECTDOJO_URL: ${{ secrets.DEFECTDOJO_URL }}
+      DEFECTDOJO_TOKEN: ${{ secrets.DEFECTDOJO_TOKEN }}
+      DEPENDENCY_TRACK_URL: ${{ secrets.DEPENDENCY_TRACK_URL }}
+      DEPENDENCY_TRACK_API_KEY: ${{ secrets.DEPENDENCY_TRACK_API_KEY }}

@@ -11,6 +11,8 @@
 
 namespace Kronos\Session;
 
+use Redis;
+
 /**
  * Redis based session storage with session locking support.
  *
@@ -23,7 +25,7 @@ namespace Kronos\Session;
 class RedisSessionHandler implements \SessionHandlerInterface
 {
     /**
-     * @var \Redis
+     * @var Redis
      */
     protected $redis;
 
@@ -75,12 +77,12 @@ class RedisSessionHandler implements \SessionHandlerInterface
     /**
      * Redis session storage constructor.
      *
-     * @param \Redis $redis Redis database connection
+     * @param Redis $redis Redis database connection
      * @param array $options Session options
      * @param string $prefix Prefix to use when writing session data
      */
     public function __construct(
-        \Redis $redis,
+        Redis $redis,
         array $options = array(),
         string $prefix = 'session',
         bool $locking = true,
@@ -119,25 +121,17 @@ class RedisSessionHandler implements \SessionHandlerInterface
         $this->lockKey = $sessionId . '.lock';
         for ($i = 0; $i < $attempts; ++$i) {
             // We try to acquire the lock
-            $setFunction = function ($redis, $key, $token, $ttl) {
-                return $redis->set(
-                    $key,
-                    $token,
-                    array('NX', 'PX' => $ttl)
-                );
-            };
-
-            $success = $setFunction(
-                $this->redis,
+            $success = $this->redis->set(
                 $this->getRedisKey($this->lockKey),
                 $this->token,
-                $this->lockMaxWait * 1000 + 1
+                array('NX', 'PX' => $this->lockMaxWait * 1000 + 1)
             );
 
             if ($success) {
                 $this->locked = true;
                 return true;
             }
+
             /** @psalm-suppress ArgumentTypeCoercion */
             usleep($this->spinLockWait);
         }
