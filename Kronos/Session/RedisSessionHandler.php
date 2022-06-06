@@ -55,9 +55,9 @@ class RedisSessionHandler implements \SessionHandlerInterface
     protected bool $locked;
 
     /**
-     * @var string Session lock key
+     * Session lock key
      */
-    private string $lockKey;
+    private ?string $lockKey;
 
     /**
      * @var string Session lock token
@@ -144,6 +144,8 @@ class RedisSessionHandler implements \SessionHandlerInterface
      */
     private function unlockSession()
     {
+        if ( !$this->locked || !$this->lockKey ) return;
+
         // If we have the right token, then delete the lock
         $script = <<<LUA
 if redis.call("GET", KEYS[1]) == ARGV[1] then
@@ -155,6 +157,7 @@ LUA;
 
         $this->redis->eval($script, array($this->getRedisKey($this->lockKey), $this->token), 1);
         $this->locked = false;
+        $this->lockKey = null;
         $this->token = "";
     }
 
