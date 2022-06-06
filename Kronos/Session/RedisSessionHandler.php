@@ -25,9 +25,11 @@ use Redis;
 class RedisSessionHandler implements \SessionHandlerInterface
 {
     /**
-     * @var Redis
+     * @var int Default PHP max execution time in seconds
      */
-    protected $redis;
+    public const DEFAULT_MAX_EXECUTION_TIME = 30;
+
+    protected Redis $redis;
 
     /**
      * @var int
@@ -38,11 +40,6 @@ class RedisSessionHandler implements \SessionHandlerInterface
      * @var string
      */
     protected string $prefix;
-
-    /**
-     * @var int Default PHP max execution time in seconds
-     */
-    const DEFAULT_MAX_EXECUTION_TIME = 30;
 
     /**
      * @var bool Indicates a session should be locked
@@ -68,6 +65,11 @@ class RedisSessionHandler implements \SessionHandlerInterface
      * @var int Maximum amount of seconds to wait for the lock
      */
     private int $lockMaxWait;
+
+    /**
+     * @var bool Redis lock completed with success
+     */
+    private bool $locked = false;
 
     /**
      * Redis session storage constructor.
@@ -111,7 +113,7 @@ class RedisSessionHandler implements \SessionHandlerInterface
      */
     protected function isLocked(): bool
     {
-        return $this->lockKey !== null && $this->token !== null;
+        return $this->locked && $this->lockKey !== null && $this->token !== null;
     }
 
     /**
@@ -131,6 +133,7 @@ class RedisSessionHandler implements \SessionHandlerInterface
             );
 
             if ($success) {
+                $this->locked = true;
                 return true;
             }
 
@@ -161,6 +164,7 @@ LUA;
         $this->redis->eval($script, array($this->getRedisKey($this->lockKey), $this->token), 1);
         $this->lockKey = null;
         $this->token = null;
+        $this->locked = false;
     }
 
     /**
@@ -191,9 +195,9 @@ LUA;
         $result = $this->redis->get($this->getRedisKey($id));
         if (isset($result)) {
             return is_array($result) && !empty($result) ? array_values($result)[0] : $result;
-        } else {
-            return '';
         }
+
+        return '';
     }
 
     /**
