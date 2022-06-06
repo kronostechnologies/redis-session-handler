@@ -45,14 +45,9 @@ class RedisSessionHandler implements \SessionHandlerInterface
     const DEFAULT_MAX_EXECUTION_TIME = 30;
 
     /**
-     * @var bool Indicates an sessions should be locked
+     * @var bool Indicates a session should be locked
      */
     protected bool $locking;
-
-    /**
-     * @var bool Indicates an active session lock
-     */
-    protected bool $locked;
 
     /**
      * Session lock key
@@ -95,7 +90,6 @@ class RedisSessionHandler implements \SessionHandlerInterface
         }
         $this->prefix = $prefix;
         $this->locking = $locking;
-        $this->locked = false;
         $this->spinLockWait = $spinLockWait;
         $this->lockMaxWait = ini_get('max_execution_time')
             ? (int)ini_get('max_execution_time')
@@ -108,6 +102,16 @@ class RedisSessionHandler implements \SessionHandlerInterface
     public function open($path, $name): bool
     {
         return true;
+    }
+
+    /**
+     * Check if session is locked
+     * @psalm-assert-if-true !null $this->lockKey
+     * @psalm-assert-if-true !null $this->token
+     */
+    protected function isLocked(): bool
+    {
+        return $this->lockKey !== null && $this->token !== null;
     }
 
     /**
@@ -127,7 +131,6 @@ class RedisSessionHandler implements \SessionHandlerInterface
             );
 
             if ($success) {
-                $this->locked = true;
                 return true;
             }
 
@@ -143,11 +146,11 @@ class RedisSessionHandler implements \SessionHandlerInterface
     /**
      * Unlock the session data.
      */
-    private function unlockSession()
+    private function unlockSession() : void
     {
-        if ( !$this->lockKey || !$this->token ) return;
+        if (!$this->isLocked()) return;
 
-        // If we have the right token, then delete the lock
+        // If we have the right token and lockKey, we delete the lock
         $script = <<<LUA
 if redis.call("GET", KEYS[1]) == ARGV[1] then
     return redis.call("DEL", KEYS[1])
@@ -155,9 +158,7 @@ else
     return 0
 end
 LUA;
-
         $this->redis->eval($script, array($this->getRedisKey($this->lockKey), $this->token), 1);
-        $this->locked = false;
         $this->lockKey = null;
         $this->token = null;
     }
@@ -168,9 +169,7 @@ LUA;
     public function close(): bool
     {
         if ($this->locking) {
-            if ($this->locked) {
-                $this->unlockSession();
-            }
+            $this->unlockSession();
         }
 
         return true;
@@ -182,7 +181,7 @@ LUA;
     public function read($id)
     {
         if ($this->locking) {
-            if (!$this->locked) {
+            if (!$this->isLocked()) {
                 if (!$this->lockSession($id)) {
                     return false;
                 }
