@@ -193,11 +193,17 @@ LUA;
         }
 
         $result = $this->redis->get($this->getRedisKey($id));
-        if (isset($result)) {
-            return is_array($result) && !empty($result) ? array_values($result)[0] : $result;
+        if(is_string($result)) {
+            return $result;
         }
 
-        return '';
+        if ($result === false) {
+            // This is not a failure, session is just empty.
+            return '';
+        }
+
+        // Unexpected data from redis. Will make the session_start fail
+        return false;
     }
 
     /**
