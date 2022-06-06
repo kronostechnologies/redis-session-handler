@@ -57,7 +57,7 @@ class RedisSessionHandler implements \SessionHandlerInterface
     /**
      * Session lock key
      */
-    private ?string $lockKey;
+    private ?string $lockKey = null;
 
     /**
      * @var string Session lock token
@@ -96,7 +96,6 @@ class RedisSessionHandler implements \SessionHandlerInterface
         $this->prefix = $prefix;
         $this->locking = $locking;
         $this->locked = false;
-        $this->lockKey = "";
         $this->spinLockWait = $spinLockWait;
         $this->lockMaxWait = ini_get('max_execution_time')
             ? (int)ini_get('max_execution_time')
