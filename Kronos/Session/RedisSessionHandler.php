@@ -60,9 +60,9 @@ class RedisSessionHandler implements \SessionHandlerInterface
     private ?string $lockKey = null;
 
     /**
-     * @var string Session lock token
+     * Session lock token
      */
-    private string $token;
+    private ?string $token = null;
 
     /**
      * @var int Microseconds to wait between acquire lock tries
@@ -135,6 +135,8 @@ class RedisSessionHandler implements \SessionHandlerInterface
             usleep($this->spinLockWait);
         }
 
+        $this->token = null;
+        $this->lockKey = null;
         return false;
     }
 
@@ -143,7 +145,7 @@ class RedisSessionHandler implements \SessionHandlerInterface
      */
     private function unlockSession()
     {
-        if ( !$this->locked || !$this->lockKey ) return;
+        if ( !$this->lockKey || !$this->token ) return;
 
         // If we have the right token, then delete the lock
         $script = <<<LUA
@@ -157,7 +159,7 @@ LUA;
         $this->redis->eval($script, array($this->getRedisKey($this->lockKey), $this->token), 1);
         $this->locked = false;
         $this->lockKey = null;
-        $this->token = "";
+        $this->token = null;
     }
 
     /**
