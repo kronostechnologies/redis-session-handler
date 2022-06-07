@@ -10,7 +10,8 @@
         }
     ],
     "require-dev": {
-        "vimeo/psalm": "4.23.0"
+        "vimeo/psalm": "4.23.0",
+        "cyclonedx/cyclonedx-php-composer": "3.10.0"
     },
     "autoload": {
         "psr-4": {
@@ -25,6 +26,10 @@
     "platform": {
       "php": "7.4",
       "ext-redis": "5.3"
-    }
+    },
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "cyclonedx/cyclonedx-php-composer": true
+        }
   }
 }

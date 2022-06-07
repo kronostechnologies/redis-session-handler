@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7ce7d3e650a914adf7fec2cd9d2fd43",
+    "content-hash": "fb33871d0e0bd6dda11ce2ef9819b8fe",
     "packages": [],
     "packages-dev": [
         {
@@ -465,6 +465,155 @@
             "time": "2022-02-25T21:32:43+00:00"
         },
         {
+            "name": "cyclonedx/cyclonedx-library",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CycloneDX/cyclonedx-php-library.git",
+                "reference": "f41632e1d47001700ef93fa899e6dc49779aa784"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/f41632e1d47001700ef93fa899e6dc49779aa784",
+                "reference": "f41632e1d47001700ef93fa899e6dc49779aa784",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "package-url/packageurl-php": "^1.0",
+                "php": "^7.3 || ^8.0",
+                "swaggest/json-schema": "^0.12.35"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "phpunit/phpunit": "9.5.16",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "composer-normalize": {
+                    "indent-size": 4,
+                    "indent-style": "space"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CycloneDX\\Core\\": "src/Core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "nscuro",
+                    "email": "nscuro@protonmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jan Kowalleck",
+                    "email": "jan.kowalleck@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Work with CycloneDX Software Bill-of-Materials (SBOM)",
+            "homepage": "https://github.com/CycloneDX/cyclonedx-php-library/",
+            "keywords": [
+                "CycloneDX",
+                "SBOM",
+                "bill-of-materials",
+                "bom",
+                "package-url",
+                "purl",
+                "software-bill-of-materials"
+            ],
+            "support": {
+                "issues": "https://github.com/CycloneDX/cyclonedx-php-library/issues",
+                "source": "https://github.com/CycloneDX/cyclonedx-php-library/tree/v1.5.0"
+            },
+            "time": "2022-03-07T23:02:11+00:00"
+        },
+        {
+            "name": "cyclonedx/cyclonedx-php-composer",
+            "version": "v3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
+                "reference": "341792df609deab6131ffa65f2f3b273f2e6128a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/341792df609deab6131ffa65f2f3b273f2e6128a",
+                "reference": "341792df609deab6131ffa65f2f3b273f2e6128a",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "cyclonedx/cyclonedx-library": "^1.4.2",
+                "package-url/packageurl-php": "^1.0",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0.0",
+                "phpunit/phpunit": "9.5.19",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "class": "CycloneDX\\Composer\\Plugin",
+                "composer-normalize": {
+                    "indent-size": 4,
+                    "indent-style": "space"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CycloneDX\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "nscuro",
+                    "email": "nscuro@protonmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jan Kowalleck",
+                    "email": "jan.kowalleck@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Creates CycloneDX Software Bill-of-Materials (SBOM) from PHP Composer projects",
+            "homepage": "https://github.com/CycloneDX/cyclonedx-php-composer/",
+            "keywords": [
+                "CycloneDX",
+                "SBOM",
+                "bill-of-materials",
+                "bom",
+                "package-url",
+                "purl",
+                "software-bill-of-materials"
+            ],
+            "support": {
+                "issues": "https://github.com/CycloneDX/cyclonedx-php-composer/issues",
+                "source": "https://github.com/CycloneDX/cyclonedx-php-composer/tree/v3.10.0"
+            },
+            "time": "2022-04-02T08:18:37+00:00"
+        },
+        {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
             "source": {
@@ -763,6 +912,65 @@
             "time": "2019-03-29T20:06:56+00:00"
         },
         {
+            "name": "package-url/packageurl-php",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/package-url/packageurl-php.git",
+                "reference": "c45953babed516d27a0cf6c1a2d9f7e883ce214f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/package-url/packageurl-php/zipball/c45953babed516d27a0cf6c1a2d9f7e883ce214f",
+                "reference": "c45953babed516d27a0cf6c1a2d9f7e883ce214f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "phpunit/phpunit": "9.5.11",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "extra": {
+                "composer-normalize": {
+                    "indent-size": 4,
+                    "indent-style": "space"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PackageUrl\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Kowalleck",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A parser and builder based on the package url spec.",
+            "homepage": "https://github.com/package-url/packageurl-php",
+            "keywords": [
+                "package",
+                "package-url",
+                "packageurl",
+                "purl",
+                "url"
+            ],
+            "support": {
+                "issues": "https://github.com/package-url/packageurl-php/issues",
+                "source": "https://github.com/package-url/packageurl-php/tree/1.0.4"
+            },
+            "time": "2022-01-04T14:39:41+00:00"
+        },
+        {
             "name": "phpdocumentor/reflection-common",
             "version": "2.2.0",
             "source": {
@@ -921,6 +1129,54 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
             },
             "time": "2022-03-15T21:29:03+00:00"
+        },
+        {
+            "name": "phplang/scope-exit",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phplang/scope-exit.git",
+                "reference": "239b73abe89f9414aa85a7ca075ec9445629192b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phplang/scope-exit/zipball/239b73abe89f9414aa85a7ca075ec9445629192b",
+                "reference": "239b73abe89f9414aa85a7ca075ec9445629192b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpLang\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Sara Golemon",
+                    "email": "pollita@php.net",
+                    "homepage": "https://twitter.com/SaraMG",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Emulation of SCOPE_EXIT construct from C++",
+            "homepage": "https://github.com/phplang/scope-exit",
+            "keywords": [
+                "cleanup",
+                "exit",
+                "scope"
+            ],
+            "support": {
+                "issues": "https://github.com/phplang/scope-exit/issues",
+                "source": "https://github.com/phplang/scope-exit/tree/master"
+            },
+            "time": "2016-09-17T00:15:18+00:00"
         },
         {
             "name": "psr/container",
@@ -1085,6 +1341,100 @@
                 }
             ],
             "time": "2020-10-26T13:10:38+00:00"
+        },
+        {
+            "name": "swaggest/json-diff",
+            "version": "v3.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swaggest/json-diff.git",
+                "reference": "bb3e3b4e9d842bb2e48f31ea568d0459968d1d42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swaggest/json-diff/zipball/bb3e3b4e9d842bb2e48f31ea568d0459968d1d42",
+                "reference": "bb3e3b4e9d842bb2e48f31ea568d0459968d1d42",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.23"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Swaggest\\JsonDiff\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Viacheslav Poturaev",
+                    "email": "vearutop@gmail.com"
+                }
+            ],
+            "description": "JSON diff/rearrange/patch/pointer library for PHP",
+            "support": {
+                "issues": "https://github.com/swaggest/json-diff/issues",
+                "source": "https://github.com/swaggest/json-diff/tree/v3.8.3"
+            },
+            "time": "2021-09-25T22:09:03+00:00"
+        },
+        {
+            "name": "swaggest/json-schema",
+            "version": "v0.12.39",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swaggest/php-json-schema.git",
+                "reference": "193ba39cce1ffa2d55ddd5445315e945a63298a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swaggest/php-json-schema/zipball/193ba39cce1ffa2d55ddd5445315e945a63298a2",
+                "reference": "193ba39cce1ffa2d55ddd5445315e945a63298a2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.4",
+                "phplang/scope-exit": "^1.0",
+                "swaggest/json-diff": "^3.8.2",
+                "symfony/polyfill-mbstring": "^1.19"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.23"
+            },
+            "suggest": {
+                "ext-mbstring": "For better performance"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Swaggest\\JsonSchema\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Viacheslav Poturaev",
+                    "email": "vearutop@gmail.com"
+                }
+            ],
+            "description": "High definition PHP structures with JSON-schema based validation",
+            "support": {
+                "email": "vearutop@gmail.com",
+                "issues": "https://github.com/swaggest/php-json-schema/issues",
+                "source": "https://github.com/swaggest/php-json-schema/tree/v0.12.39"
+            },
+            "time": "2021-10-15T18:12:27+00:00"
         },
         {
             "name": "symfony/console",
