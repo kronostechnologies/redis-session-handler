@@ -5,14 +5,10 @@ on:
       - master
 jobs:
   php-security:
-    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v2
+    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v3
     with:
-      publish-reports: false
+      publish-reports: true
       php-version: '7.4'
       extensions: pcov
     secrets:
       GPR_KEY: ${{ secrets.GPR_KEY }}
-      DEFECTDOJO_URL: ${{ secrets.DEFECTDOJO_URL }}
-      DEFECTDOJO_TOKEN: ${{ secrets.DEFECTDOJO_TOKEN }}
-      DEPENDENCY_TRACK_URL: ${{ secrets.DEPENDENCY_TRACK_URL }}
-      DEPENDENCY_TRACK_API_KEY: ${{ secrets.DEPENDENCY_TRACK_API_KEY }}
