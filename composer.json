@@ -1,35 +1,35 @@
 {
-    "name": "kronos/redis-session-handler",
-    "description": "Port of https://github.com/snc/SncRedisBundle RedisSessionHandler",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Eric Durand-Tremblay",
-            "email": "etremblay@kronostechnologies.com"
-        }
-    ],
-    "require-dev": {
-        "vimeo/psalm": "4.23.0",
-        "cyclonedx/cyclonedx-php-composer": "3.10.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Kronos\\Session\\": "Kronos/Session"
-        }
-    },
+  "name": "kronos/redis-session-handler",
+  "description": "Port of https://github.com/snc/SncRedisBundle RedisSessionHandler",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eric Durand-Tremblay",
+      "email": "etremblay@kronostechnologies.com"
+    }
+  ],
+  "require-dev": {
+    "vimeo/psalm": "5.5.0",
+    "cyclonedx/cyclonedx-php-composer": "3.10.0",
+    "squizlabs/php_codesniffer": "3.7.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+    "kronostechnologies/php-coding-standard": "2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kronos\\Session\\": "Kronos/Session"
+    }
+  },
   "require": {
-    "php": "^7.4 || ^8.1",
+    "php": "^8.1",
     "ext-redis": "*"
   },
   "config": {
-    "platform": {
-      "php": "7.4",
-      "ext-redis": "5.3"
-    },
-        "allow-plugins": {
-            "composer/package-versions-deprecated": true,
-            "cyclonedx/cyclonedx-php-composer": true
-        }
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "cyclonedx/cyclonedx-php-composer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }

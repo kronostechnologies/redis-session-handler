@@ -12,6 +12,7 @@
 namespace Kronos\Session;
 
 use Redis;
+use SessionHandlerInterface;
 
 /**
  * Redis based session storage with session locking support.
@@ -22,7 +23,7 @@ use Redis;
  * @author Maurits van der Schee <maurits@vdschee.nl>
  * @author Pierre Boudelle <pierre.boudelle@gmail.com>
  */
-class RedisSessionHandler implements \SessionHandlerInterface
+class RedisSessionHandler implements SessionHandlerInterface
 {
     /**
      * @var int Default PHP max execution time in seconds
@@ -149,9 +150,11 @@ class RedisSessionHandler implements \SessionHandlerInterface
     /**
      * Unlock the session data.
      */
-    private function unlockSession() : void
+    private function unlockSession(): void
     {
-        if (!$this->isLocked()) return;
+        if (!$this->isLocked()) {
+            return;
+        }
 
         // If we have the right token and lockKey, we delete the lock
         $script = <<<LUA
@@ -182,7 +185,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
-    public function read($id)
+    public function read($id): string|false
     {
         if ($this->locking) {
             if (!$this->isLocked()) {
@@ -193,7 +196,7 @@ LUA;
         }
 
         $result = $this->redis->get($this->getRedisKey($id));
-        if(is_string($result)) {
+        if (is_string($result)) {
             return $result;
         }
 
@@ -234,7 +237,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
-    public function gc($max_lifetime)
+    public function gc($max_lifetime): int|false
     {
         return 1;
     }
