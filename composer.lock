@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6965b52bd8dc0fb68c5a1fb3d9b926ae",
+    "content-hash": "3e79d641cf7d355e9144458fecfa08fd",
     "packages": [],
     "packages-dev": [
         {
@@ -473,16 +473,16 @@
         },
         {
             "name": "cyclonedx/cyclonedx-library",
-            "version": "v2.1.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-library.git",
-                "reference": "ee9c413d57043b95713ab326f076776ed8d05bf6"
+                "reference": "00216e3df6185b4472cd72dff45f33f94e62aaf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/ee9c413d57043b95713ab326f076776ed8d05bf6",
-                "reference": "ee9c413d57043b95713ab326f076776ed8d05bf6",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/00216e3df6185b4472cd72dff45f33f94e62aaf2",
+                "reference": "00216e3df6185b4472cd72dff45f33f94e62aaf2",
                 "shasum": ""
             },
             "require": {
@@ -559,20 +559,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-03-28T16:42:58+00:00"
+            "time": "2023-04-05T09:50:38+00:00"
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v4.0.0",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "92b18c160a5329d12e3437a267f8a8cf55dfeb94"
+                "reference": "a4baab02af9eb592e8d026849489c338d7183ce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/92b18c160a5329d12e3437a267f8a8cf55dfeb94",
-                "reference": "92b18c160a5329d12e3437a267f8a8cf55dfeb94",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/a4baab02af9eb592e8d026849489c338d7183ce5",
+                "reference": "a4baab02af9eb592e8d026849489c338d7183ce5",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +639,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-03-31T06:27:16+00:00"
+            "time": "2023-04-24T10:01:10+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
