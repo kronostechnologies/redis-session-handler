@@ -473,16 +473,16 @@
         },
         {
             "name": "cyclonedx/cyclonedx-library",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-library.git",
-                "reference": "c2f0a54db011fcc261cd1e1ce7bce2da3d51a070"
+                "reference": "6819a286e7b8e8514e511dd1bbd9a88d3e45bf8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/c2f0a54db011fcc261cd1e1ce7bce2da3d51a070",
-                "reference": "c2f0a54db011fcc261cd1e1ce7bce2da3d51a070",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/6819a286e7b8e8514e511dd1bbd9a88d3e45bf8f",
+                "reference": "6819a286e7b8e8514e511dd1bbd9a88d3e45bf8f",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +559,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-08-27T16:13:30+00:00"
+            "time": "2023-09-16T16:42:36+00:00"
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
