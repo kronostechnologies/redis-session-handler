@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bdd8ff6cd168b18701b293b215dbaeb4",
+    "content-hash": "5879c39dde2a7899cb830d06c9a7a257",
     "packages": [],
     "packages-dev": [
         {
@@ -563,16 +563,16 @@
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v4.2.1",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "0443e0c27d9db778d70b965f4a5983bbe922a935"
+                "reference": "1223dabb7fea864b218a3fbd32c0fb132e880559"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/0443e0c27d9db778d70b965f4a5983bbe922a935",
-                "reference": "0443e0c27d9db778d70b965f4a5983bbe922a935",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/1223dabb7fea864b218a3fbd32c0fb132e880559",
+                "reference": "1223dabb7fea864b218a3fbd32c0fb132e880559",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +639,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-10-27T14:31:59+00:00"
+            "time": "2023-11-05T20:10:53+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
