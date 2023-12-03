@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcbbea073540dc6e706eed7263d8c9bb",
+    "content-hash": "f485a6d2dfa22f1eae57bd5b03b3c04e",
     "packages": [],
     "packages-dev": [
         {
@@ -564,27 +564,28 @@
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v4.2.3",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "5857f1336f83ff5a1ace1c1e41a59ed36f1d7f6b"
+                "reference": "a2a5ee1f3cd3233850137b9f55c222c82072b1a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/5857f1336f83ff5a1ace1c1e41a59ed36f1d7f6b",
-                "reference": "5857f1336f83ff5a1ace1c1e41a59ed36f1d7f6b",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/a2a5ee1f3cd3233850137b9f55c222c82072b1a3",
+                "reference": "a2a5ee1f3cd3233850137b9f55c222c82072b1a3",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.3",
-                "cyclonedx/cyclonedx-library": "^2.3 || ^3.0",
+                "cyclonedx/cyclonedx-library": "^3.1",
                 "package-url/packageurl-php": "^1.0",
                 "php": "^8.1"
             },
             "require-dev": {
                 "composer/composer": "^2.3.0",
-                "roave/security-advisories": "dev-latest"
+                "roave/security-advisories": "dev-latest",
+                "symfony/console": "<7"
             },
             "type": "composer-plugin",
             "extra": {
@@ -640,7 +641,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-11-27T11:34:46+00:00"
+            "time": "2023-12-03T13:01:06+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
