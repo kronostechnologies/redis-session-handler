@@ -11,7 +11,7 @@
   ],
   "require-dev": {
     "vimeo/psalm": "5.16.0",
-    "cyclonedx/cyclonedx-php-composer": "4.2.2",
+    "cyclonedx/cyclonedx-php-composer": "4.2.3",
     "squizlabs/php_codesniffer": "3.7.2",
     "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
     "kronostechnologies/php-coding-standard": "2.0.0"
