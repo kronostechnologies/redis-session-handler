@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d92b573d440fc128ea89f97821622fbf",
+    "content-hash": "dcbbea073540dc6e706eed7263d8c9bb",
     "packages": [],
     "packages-dev": [
         {
@@ -473,16 +473,16 @@
         },
         {
             "name": "cyclonedx/cyclonedx-library",
-            "version": "v3.0.1",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-library.git",
-                "reference": "6819a286e7b8e8514e511dd1bbd9a88d3e45bf8f"
+                "reference": "3ce5e917fe76a5843bb47e9c55a95856edd2d5ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/6819a286e7b8e8514e511dd1bbd9a88d3e45bf8f",
-                "reference": "6819a286e7b8e8514e511dd1bbd9a88d3e45bf8f",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/3ce5e917fe76a5843bb47e9c55a95856edd2d5ed",
+                "reference": "3ce5e917fe76a5843bb47e9c55a95856edd2d5ed",
                 "shasum": ""
             },
             "require": {
@@ -524,11 +524,11 @@
                     "homepage": "https://github.com/jkowalleck"
                 }
             ],
-            "description": "Work with Bill-of-Materials (BOM) in CycloneDX format.",
+            "description": "Work with CycloneDX documents.",
             "homepage": "https://github.com/CycloneDX/cyclonedx-php-library/#readme",
             "keywords": [
                 "CycloneDX",
-                "MBOM",
+                "HBOM",
                 "OBOM",
                 "SBOM",
                 "SaaSBOM",
@@ -543,6 +543,7 @@
                 "software-bill-of-materials",
                 "spdx",
                 "validator",
+                "vdr",
                 "vex"
             ],
             "support": {
@@ -559,20 +560,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-09-16T16:42:36+00:00"
+            "time": "2023-12-02T09:10:05+00:00"
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v4.2.2",
+            "version": "v4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "1223dabb7fea864b218a3fbd32c0fb132e880559"
+                "reference": "5857f1336f83ff5a1ace1c1e41a59ed36f1d7f6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/1223dabb7fea864b218a3fbd32c0fb132e880559",
-                "reference": "1223dabb7fea864b218a3fbd32c0fb132e880559",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/5857f1336f83ff5a1ace1c1e41a59ed36f1d7f6b",
+                "reference": "5857f1336f83ff5a1ace1c1e41a59ed36f1d7f6b",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +640,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-11-05T20:10:53+00:00"
+            "time": "2023-11-27T11:34:46+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -1293,16 +1294,16 @@
         },
         {
             "name": "package-url/packageurl-php",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/package-url/packageurl-php.git",
-                "reference": "f9c1e43563f5651b9cec87b7da1f4a7566eb9d36"
+                "reference": "31bc8df35f628bf495529af3351f454deac82a54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/package-url/packageurl-php/zipball/f9c1e43563f5651b9cec87b7da1f4a7566eb9d36",
-                "reference": "f9c1e43563f5651b9cec87b7da1f4a7566eb9d36",
+                "url": "https://api.github.com/repos/package-url/packageurl-php/zipball/31bc8df35f628bf495529af3351f454deac82a54",
+                "reference": "31bc8df35f628bf495529af3351f454deac82a54",
                 "shasum": ""
             },
             "require": {
@@ -1347,7 +1348,7 @@
             ],
             "support": {
                 "issues": "https://github.com/package-url/packageurl-php/issues",
-                "source": "https://github.com/package-url/packageurl-php/tree/1.1.0"
+                "source": "https://github.com/package-url/packageurl-php/tree/1.1.1"
             },
             "funding": [
                 {
@@ -1355,7 +1356,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-18T12:22:46+00:00"
+            "time": "2023-11-27T09:22:51+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
