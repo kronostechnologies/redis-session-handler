@@ -26,6 +26,9 @@
     "ext-redis": "*"
   },
   "config": {
+    "platform": {
+      "php": "8.1"
+    },
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
       "cyclonedx/cyclonedx-php-composer": true,
