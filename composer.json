@@ -10,7 +10,7 @@
     }
   ],
   "require-dev": {
-    "vimeo/psalm": "5.16.0",
+    "vimeo/psalm": "5.17.0",
     "cyclonedx/cyclonedx-php-composer": "5.0.0",
     "squizlabs/php_codesniffer": "3.8.0",
     "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
@@ -26,6 +26,9 @@
     "ext-redis": "*"
   },
   "config": {
+    "platform": {
+      "php": "8.1"
+    },
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
       "cyclonedx/cyclonedx-php-composer": true,
