@@ -17,3 +17,12 @@ jobs:
       extensions: pcov
     secrets:
       GPR_KEY: ${{ secrets.GPR_KEY }}
+
+  php-library-php-8-3:
+    uses: equisoft-actions/php-workflows/.github/workflows/php-library.yml@v4
+    with:
+      checks: psalm
+      php-version: '8.3'
+      extensions: pcov
+    secrets:
+      GPR_KEY: ${{ secrets.GPR_KEY }}
