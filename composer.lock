@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d07a85798e538cdabe669dfc172ed80",
+    "content-hash": "e6098fdcd959fd081d86f589260e9087",
     "packages": [],
     "packages-dev": [
         {
@@ -473,16 +473,16 @@
         },
         {
             "name": "cyclonedx/cyclonedx-library",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-library.git",
-                "reference": "3ce5e917fe76a5843bb47e9c55a95856edd2d5ed"
+                "reference": "d30f707d97bed6fae4b9d3a480aae70fa92c326a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/3ce5e917fe76a5843bb47e9c55a95856edd2d5ed",
-                "reference": "3ce5e917fe76a5843bb47e9c55a95856edd2d5ed",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/d30f707d97bed6fae4b9d3a480aae70fa92c326a",
+                "reference": "d30f707d97bed6fae4b9d3a480aae70fa92c326a",
                 "shasum": ""
             },
             "require": {
@@ -552,28 +552,24 @@
             },
             "funding": [
                 {
-                    "url": "https://github.com/sponsors/jkowalleck",
-                    "type": "github"
-                },
-                {
                     "url": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX",
                     "type": "other"
                 }
             ],
-            "time": "2023-12-02T09:10:05+00:00"
+            "time": "2024-02-05T11:43:17+00:00"
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v5.0.0",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "a2a5ee1f3cd3233850137b9f55c222c82072b1a3"
+                "reference": "b5ff6da5c81452537244e42791b831bf40a0bab8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/a2a5ee1f3cd3233850137b9f55c222c82072b1a3",
-                "reference": "a2a5ee1f3cd3233850137b9f55c222c82072b1a3",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/b5ff6da5c81452537244e42791b831bf40a0bab8",
+                "reference": "b5ff6da5c81452537244e42791b831bf40a0bab8",
                 "shasum": ""
             },
             "require": {
@@ -633,15 +629,11 @@
             },
             "funding": [
                 {
-                    "url": "https://github.com/sponsors/jkowalleck",
-                    "type": "github"
-                },
-                {
                     "url": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX",
                     "type": "other"
                 }
             ],
-            "time": "2023-12-03T13:01:06+00:00"
+            "time": "2024-02-05T11:56:38+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -1295,16 +1287,16 @@
         },
         {
             "name": "package-url/packageurl-php",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/package-url/packageurl-php.git",
-                "reference": "31bc8df35f628bf495529af3351f454deac82a54"
+                "reference": "32058ad61f0d8b457fa26e7860bbd8b903196d3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/package-url/packageurl-php/zipball/31bc8df35f628bf495529af3351f454deac82a54",
-                "reference": "31bc8df35f628bf495529af3351f454deac82a54",
+                "url": "https://api.github.com/repos/package-url/packageurl-php/zipball/32058ad61f0d8b457fa26e7860bbd8b903196d3f",
+                "reference": "32058ad61f0d8b457fa26e7860bbd8b903196d3f",
                 "shasum": ""
             },
             "require": {
@@ -1312,7 +1304,7 @@
             },
             "require-dev": {
                 "ext-json": "*",
-                "phpunit/phpunit": "9.6.13",
+                "phpunit/phpunit": "9.6.16",
                 "roave/security-advisories": "dev-latest"
             },
             "type": "library",
@@ -1349,7 +1341,7 @@
             ],
             "support": {
                 "issues": "https://github.com/package-url/packageurl-php/issues",
-                "source": "https://github.com/package-url/packageurl-php/tree/1.1.1"
+                "source": "https://github.com/package-url/packageurl-php/tree/1.1.2"
             },
             "funding": [
                 {
@@ -1357,7 +1349,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-27T09:22:51+00:00"
+            "time": "2024-02-05T11:20:07+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
