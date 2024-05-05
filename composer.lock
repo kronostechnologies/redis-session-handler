@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81649413247820d5881ed25434c356b3",
+    "content-hash": "c97295516d253077e6e704e3de92f98c",
     "packages": [],
     "packages-dev": [
         {
@@ -555,21 +555,21 @@
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "d1d5ceb9ec3bbb695aa9a1a4f4a310bf24620185"
+                "reference": "f3a3cdc1a9e34bf1d5748e4279a24569cbf31fed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/d1d5ceb9ec3bbb695aa9a1a4f4a310bf24620185",
-                "reference": "d1d5ceb9ec3bbb695aa9a1a4f4a310bf24620185",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/f3a3cdc1a9e34bf1d5748e4279a24569cbf31fed",
+                "reference": "f3a3cdc1a9e34bf1d5748e4279a24569cbf31fed",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.3",
-                "cyclonedx/cyclonedx-library": "^3.2",
+                "cyclonedx/cyclonedx-library": "^3.3",
                 "package-url/packageurl-php": "^1.0",
                 "php": "^8.1"
             },
@@ -627,7 +627,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-04-23T13:03:11+00:00"
+            "time": "2024-04-30T10:47:47+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
