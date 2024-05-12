@@ -10,7 +10,7 @@ on:
 
 jobs:
   php-security:
-    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v4
+    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v5
     with:
       publish-reports: true
       php-version: '8.1'
