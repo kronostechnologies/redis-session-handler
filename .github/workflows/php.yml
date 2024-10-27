@@ -10,7 +10,7 @@ on:
 
 jobs:
   php-library:
-    uses: equisoft-actions/php-workflows/.github/workflows/php-library.yml@v7
+    uses: equisoft-actions/php-workflows/.github/workflows/php-library.yml@v8
     secrets: inherit
     with:
       checks: psalm,phpcs
@@ -18,7 +18,7 @@ jobs:
       extensions: pcov
 
   php-library-php-8-3:
-    uses: equisoft-actions/php-workflows/.github/workflows/php-library.yml@v7
+    uses: equisoft-actions/php-workflows/.github/workflows/php-library.yml@v8
     secrets: inherit
     with:
       checks: psalm
