@@ -14,5 +14,5 @@ jobs:
     secrets: inherit
     with:
       publish-reports: true
-      php-version: '8.1'
+      php-version: '8.3'
       extensions: pcov

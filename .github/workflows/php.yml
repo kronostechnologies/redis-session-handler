@@ -1,7 +1,7 @@
 name: PHP
 
 on:
-  pull_request: { }
+  pull_request: {}
   push:
     branches:
       - master
@@ -14,13 +14,5 @@ jobs:
     secrets: inherit
     with:
       checks: psalm,phpcs
-      php-version: '8.1'
-      extensions: pcov
-
-  php-library-php-8-3:
-    uses: equisoft-actions/php-workflows/.github/workflows/php-library.yml@v8
-    secrets: inherit
-    with:
-      checks: psalm
       php-version: '8.3'
       extensions: pcov
