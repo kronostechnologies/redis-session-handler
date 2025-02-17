@@ -22,12 +22,12 @@
     }
   },
   "require": {
-    "php": "^8.1",
+    "php": "^8.3",
     "ext-redis": "*"
   },
   "config": {
     "platform": {
-      "php": "8.3"
+      "php": "8.3.17"
     },
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
