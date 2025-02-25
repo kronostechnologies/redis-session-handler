@@ -124,7 +124,7 @@ class RedisSessionHandler implements SessionHandlerInterface
      */
     protected function lockSession($sessionId): bool
     {
-        $attempts = (int)round((1000000 / $this->spinLockWait),0) * $this->lockMaxWait;
+        $attempts = (int)round((1000000 / $this->spinLockWait), 0) * $this->lockMaxWait;
         $this->token = uniqid();
         $this->lockKey = $sessionId . '.lock';
         for ($i = 0; $i < $attempts; ++$i) {
