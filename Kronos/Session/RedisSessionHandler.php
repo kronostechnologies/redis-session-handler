@@ -11,6 +11,7 @@
 
 namespace Kronos\Session;
 
+use Override;
 use Redis;
 use SessionHandlerInterface;
 
@@ -102,6 +103,7 @@ class RedisSessionHandler implements SessionHandlerInterface
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function open($path, $name): bool
     {
         return true;
@@ -122,7 +124,7 @@ class RedisSessionHandler implements SessionHandlerInterface
      */
     protected function lockSession($sessionId): bool
     {
-        $attempts = (1000000 / $this->spinLockWait) * $this->lockMaxWait;
+        $attempts = (int)round((1000000 / $this->spinLockWait), 0) * $this->lockMaxWait;
         $this->token = uniqid();
         $this->lockKey = $sessionId . '.lock';
         for ($i = 0; $i < $attempts; ++$i) {
@@ -173,6 +175,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function close(): bool
     {
         if ($this->locking) {
@@ -185,6 +188,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function read($id): string|false
     {
         if ($this->locking) {
@@ -212,6 +216,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function write($id, $data): bool
     {
         if (0 < $this->ttl) {
@@ -226,6 +231,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function destroy($id): bool
     {
         $this->redis->del($this->getRedisKey($id));
@@ -237,6 +243,7 @@ LUA;
     /**
      * {@inheritdoc}
      */
+    #[Override]
     public function gc($max_lifetime): int|false
     {
         return 1;
