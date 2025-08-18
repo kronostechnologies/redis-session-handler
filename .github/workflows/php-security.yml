@@ -10,7 +10,7 @@ on:
 
 jobs:
   php-security:
-    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v8
+    uses: equisoft-actions/php-workflows/.github/workflows/php-security.yml@v9
     secrets: inherit
     with:
       publish-reports: true
