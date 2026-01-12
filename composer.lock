@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fda37b4c11782a8c04abcff7e577006",
+    "content-hash": "b2d085f0bb64f163dd4e39b3ec2223ef",
     "packages": [],
     "packages-dev": [
         {
@@ -1208,26 +1208,27 @@
         },
         {
             "name": "cyclonedx/cyclonedx-php-composer",
-            "version": "v6.0.0",
+            "version": "v6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                "reference": "6a54048d5b9c6e92d6fc14c46fb44b2f3d31d2ae"
+                "reference": "d718efc4c201acd0da7d2c2e5690864b2a5c7116"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/6a54048d5b9c6e92d6fc14c46fb44b2f3d31d2ae",
-                "reference": "6a54048d5b9c6e92d6fc14c46fb44b2f3d31d2ae",
+                "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/d718efc4c201acd0da7d2c2e5690864b2a5c7116",
+                "reference": "d718efc4c201acd0da7d2c2e5690864b2a5c7116",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.3",
-                "cyclonedx/cyclonedx-library": "^3.3",
+                "cyclonedx/cyclonedx-library": "^3.9",
                 "package-url/packageurl-php": "^1.0",
                 "php": "^8.1"
             },
             "require-dev": {
                 "composer/composer": "^2.3.0",
+                "marc-mabe/php-enum": "^4.6",
                 "roave/security-advisories": "dev-latest"
             },
             "type": "composer-plugin",
@@ -1280,7 +1281,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-11-17T14:18:23+00:00"
+            "time": "2026-01-07T13:45:28+00:00"
         },
         {
             "name": "danog/advanced-json-rpc",
