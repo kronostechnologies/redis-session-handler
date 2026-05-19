@@ -13,7 +13,7 @@
     "vimeo/psalm": "6.16.1",
     "cyclonedx/cyclonedx-php-composer": "6.2.0",
     "squizlabs/php_codesniffer": "4.0.1",
-    "dealerdirect/phpcodesniffer-composer-installer": "1.2.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "1.2.1",
     "kronostechnologies/php-coding-standard": "2.1.0"
   },
   "autoload": {
